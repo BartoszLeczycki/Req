@@ -23,11 +23,21 @@ namespace Rekrutacja_AQA.PageObjects
             driver.ClickWithWait(ModalAcceptButtonLocator);
             Thread.Sleep(500);
             driver.ScrollToElement(CelebratingCenturyImage, -10);
-            driver.SwitchTo().Frame(CustomerReviewsIframe);
+            Frame();
             driver.ClickWithWait(TrustpilotIconlocator);
-            driver.SwitchTo().DefaultContent();
+            ToDefault();
 
-            return new Trustpilot();
+            return this;
+        }
+
+        public void Frame()
+        {
+            // ??
+        }
+
+        public void ToDefault()
+        {
+            // ??
         }
     }
 }
