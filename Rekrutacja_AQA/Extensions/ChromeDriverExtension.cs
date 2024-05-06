@@ -8,12 +8,14 @@ namespace Rekrutacja_AQA.Extensions
     {
         public void ScrollToElement(IWebDriver driver, IWebElement element, int offset)
         {
-            // ?? 
+            ((IJavaScriptExecutor)driver).ExecuteScript(
+                "arguments[0].scrollIntoView(true); window.scrollBy(0, arguments[1]);",
+                element, offset);
         }
 
         public void SwitchToTheNewlyOpenedWindow(IWebDriver driver)
         {
-            // ?? 
+            driver.SwitchTo().Window(driver.WindowHandles.First());
         }
 
         public void ClickWithWait(IWebDriver driver, By locator)

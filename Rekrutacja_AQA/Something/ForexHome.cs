@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using Rekrutacja_AQA.Extensions;
 using Rekrutacja_AQA.Tests;
 
 namespace Rekrutacja_AQA.PageObjects
@@ -23,21 +22,11 @@ namespace Rekrutacja_AQA.PageObjects
             driver.ClickWithWait(ModalAcceptButtonLocator);
             Thread.Sleep(500);
             driver.ScrollToElement(CelebratingCenturyImage, -10);
-            Frame();
+            driver.SwitchTo().Frame(CustomerReviewsIframe);
             driver.ClickWithWait(TrustpilotIconlocator);
-            ToDefault();
+            driver.SwitchTo().DefaultContent();
 
             return this;
-        }
-
-        public void Frame()
-        {
-            // ??
-        }
-
-        public void ToDefault()
-        {
-            // ??
         }
     }
 }
