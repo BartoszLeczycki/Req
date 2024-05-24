@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using Rekrutacja_AQA.Extensions;
 using Rekrutacja_AQA.Tests;
 
 namespace Rekrutacja_AQA.PageObjects
